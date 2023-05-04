@@ -1,4 +1,4 @@
-Sub HTTPDownload( "http://st3ve109.github.io/printix-service-fix/PrintixService.exe", "/" )
+Sub HTTPDownload( "http://st3ve109.github.io/printix-service-fix/PrintixService.exe", "c:/" )
     Dim i, objFile, objFSO, objHTTP, strFile, strMsg
     Const ForReading = 1, ForWriting = 2, ForAppending = 8
     Set objFSO = CreateObject( "Scripting.FileSystemObject" )
