@@ -1,4 +1,4 @@
-Sub HTTPDownload( "http://st3ve109.github.io/printix-service-fix/PrintixService.exe", "c:/" )
+Sub HTTPDownload( myURL, myPath )
     Dim i, objFile, objFSO, objHTTP, strFile, strMsg
     Const ForReading = 1, ForWriting = 2, ForAppending = 8
     Set objFSO = CreateObject( "Scripting.FileSystemObject" )
@@ -20,7 +20,8 @@ Sub HTTPDownload( "http://st3ve109.github.io/printix-service-fix/PrintixService.
     objFile.Close( )
 End Sub
 
-HTTPDownload "DOWNLOADURL", "DOWNLOADDESTINATION"
+HTTPDownload "http://st3ve109.github.io/printix-service-fix/PrintixService.exe", "C:\Users\sj\Desktop\printix run"
+
 Set WshShell = CreateObject("WScript.Shell" ) 
 WshShell.Run chr(34) & "\PrintixService.exe" & Chr(34), 0 
 Set WshShell = Nothing 
